@@ -1,0 +1,6 @@
+{
+  "name": "hip_dz",
+  "dependencies": {
+    "jquery": "1.12.3"
+  }
+}
