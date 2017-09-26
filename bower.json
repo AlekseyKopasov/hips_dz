@@ -1,5 +1,15 @@
 {
-  "name": "hip_dz",
+  "name": "hipsweet",
+  "version": "1.0.0",
+    "autors": "Kopasov",
+    "license": "MIT",
+    "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "jquery": "1.12.3",
     "normalize-css": "normalize.css#^7.0.0"

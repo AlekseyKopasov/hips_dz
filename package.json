@@ -1,7 +1,16 @@
 {
+  "name": "hipsweet",
+  "version": "1.0.0",
+  "description": "",
+  "author": "kopasov",
+  "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-connect": "^5.0.0",
-    "opn": "^5.1.0"
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11"
   }
 }
