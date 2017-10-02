@@ -1,9 +1,10 @@
-body{
-    background: #ccc;
-}
+// Vars
 
-p{
-    font-size: 20px;
-    color: darkgreen;
-    border: 5px solid #eee;
-}
+// Layout
+@import "_misc/normalize";
+@import "_misc/adjustment";
+
+// Styles
+@import "section/header.scss";
+
+// Media

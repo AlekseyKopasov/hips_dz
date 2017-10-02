@@ -13,6 +13,9 @@ var gulp = require('gulp'),
     browserSync = require("browser-sync"),
     reload = browserSync.reload;
 
+/* установка плагинов: npm i --save-dev gulp gulp-watch gulp-autoprefixer gulp-uglify gulp-sass gulp-sourcemaps gulp-minify-css gulp-imagemin imagemin-pngquant rimraf browser-sync
+*/
+
 /* Создадим js объект, в который пропишем все нужные нам пути, чтобы при необходимости легко в одном месте их редактировать
 */
 
@@ -27,7 +30,7 @@ var path = {
     src: { //Пути откуда брать исходники
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
-        style: 'src/style/main.scss',
+        style: 'src/style/*.scss',
         img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/**/*.*'
     },
