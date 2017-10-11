@@ -1,0 +1,19 @@
+@font-face {
+	font-family: "RobotoRegular";
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+			 url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "malina-webfont";
+	src: url("../fonts/malina-webfont/malina-webfont.eot");
+	src: url("../fonts/malina-webfont/malina-webfont.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/malina-webfont/malina-webfont.woff") format("woff"),
+			 url("../fonts/malina-webfont/malina-webfont.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}

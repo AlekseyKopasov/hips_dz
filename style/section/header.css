@@ -1,0 +1,156 @@
+.header {
+  min-height: 750px;
+  background: url("../../img/header_bg.png") no-repeat center;
+  background-size: cover; }
+
+/*==========  header__top  ==========*/
+.header__top {
+  position: relative;
+  width: 100%;
+  margin-bottom: 85px; }
+
+.header__top-logo {
+  float: left;
+  width: 283px;
+  height: 66px; }
+
+.header__top-menu {
+  display: inline-block; }
+
+.nav__item {
+  margin-left: 70px;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  line-height: 66px;
+  padding: 4px 0;
+  color: #fff; }
+
+.header__top-icons {
+  display: inline-block;
+  float: right;
+  height: 66px;
+  line-height: 66px; }
+  .header__top-icons img {
+    padding-left: 20px; }
+
+/*==========  header__bottom  ==========*/
+.header__bottom {
+  position: relative; }
+
+.header__bottom-info {
+  display: inline-block;
+  width: 145px;
+  margin-right: 40px;
+  margin-top: 65px;
+  float: left; }
+
+.header__bottom-info-ingredients {
+  margin-bottom: 185px; }
+  .header__bottom-info-ingredients img {
+    padding: 0 50px;
+    margin-bottom: 22px; }
+
+.cake_info-desc {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  display: block;
+  text-align: center; }
+
+.header__bottom-img {
+  display: inline-block;
+  width: 470px; }
+  .header__bottom-img img {
+    vertical-align: inherit; }
+
+.header__bottom-img-cake {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  font-family: 'malina-webfont', sans-serif;
+  font-size: 150px;
+  color: #fff;
+  opacity: 0.1;
+  text-transform: uppercase; }
+
+.header__bottom-description {
+  display: inline-block;
+  width: 405px;
+  float: right; }
+  .header__bottom-description h2 {
+    font-family: 'malina-webfont', sans-serif;
+    font-size: 51px;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 3px; }
+
+.sweetcupcake-desc {
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+  color: #fff; }
+
+.cup_prise, .fa-rub {
+  font-family: 'malina-webfont', sans-serif;
+  font-size: 51px;
+  color: #fff; }
+
+.header__bottom-info-time-term {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  opacity: 0.28;
+  text-align: center;
+  display: block; }
+
+.header__bottom-info-time-desc {
+  font-family: 'malina-webfont', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  display: block;
+  text-align: center; }
+
+.btn {
+  width: 100px;
+  height: 45px;
+  background: #fca211;
+  color: #b82429;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  margin-left: 45px;
+  border: none;
+  transition: all 0.2s linear; }
+  .btn:hover {
+    background: #641a00;
+    color: #da870c;
+    transition: all 0.2s linear; }
+
+.header__bottom-dott {
+  display: block; }
+  .header__bottom-dott img {
+    text-align: center;
+    padding: 0 50%; }
+
+table.cake__info-hover-tabl {
+  min-width: 380px;
+  text-align: left;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 20px;
+  position: absolute;
+  font: bold, 14px, 'Arial'; }
+
+.img-ing1 {
+  padding-top: 40px; }
+
+.img-ing5 {
+  padding-bottom: 35px; }
+
+.img-ing {
+  padding: 0 15px 0 35px; }
+
+table.cake__info-hover-tabl tbody td {
+  font-size: 14px; }
+
+/*# sourceMappingURL=header.css.map */

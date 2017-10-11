@@ -1,20 +1,16 @@
-"use strict";
-
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
+    rigger = require('gulp-rigger'),
     cssmin = require('gulp-minify-css'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
     reload = browserSync.reload;
-
-/* установка плагинов: npm i --save-dev gulp gulp-watch gulp-autoprefixer gulp-uglify gulp-sass gulp-sourcemaps gulp-minify-css gulp-imagemin imagemin-pngquant rimraf browser-sync
-*/
 
 /* Создадим js объект, в который пропишем все нужные нам пути, чтобы при необходимости легко в одном месте их редактировать
 */
@@ -23,31 +19,41 @@ var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
         html: 'build/',
         js: 'build/js/',
-        css: 'build/style/',
+        css: 'build/css/',
         img: 'build/img/',
         fonts: 'build/fonts/'
     },
     src: { //Пути откуда брать исходники
-        html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-        js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
-        style: 'src/style/*.scss',
-        img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
-        fonts: 'src/fonts/**/*.*'
+        html: '*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
+        js: 'js/main.js',//В стилях и скриптах нам понадобятся только main файлы
+        style: 'style/main.scss',
+        img: 'img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        fonts: 'fonts/**/*.*'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
-        html: 'src/**/*.html',
-        js: 'src/js/**/*.js',
-        style: 'src/style/**/*.scss',
-        img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+        html: '**/*.html',
+        js: 'js/**/*.js',
+        style: 'style/**/*.scss',
+        img: 'img/**/*.*',
+        fonts: 'fonts/**/*.*'
     },
     clean: './build'
 };
 
+// переменная с настройками нашего сервера
+var config = {
+    server: {
+        baseDir: "./build"
+    },
+    host: 'localhost',
+    port: 9000,
+    browser: "chrome.exe"
+};
 
 // Собираем html
 gulp.task('html:build', function () {
     gulp.src(path.src.html) //Выберем файлы по нужному пути
+        .pipe(rigger()) //Прогоним через rigger
         .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
         .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
@@ -55,6 +61,7 @@ gulp.task('html:build', function () {
 // Собираем JS
 gulp.task('js:build', function () {
     gulp.src(path.src.js) //Найдем наш main файл
+        .pipe(rigger()) //Прогоним через rigger
         .pipe(sourcemaps.init()) //Инициализируем sourcemap
         .pipe(uglify()) //Сожмем наш js
         .pipe(sourcemaps.write()) //Пропишем карты
@@ -86,7 +93,6 @@ gulp.task('image:build', function () {
         .pipe(gulp.dest(path.build.img)) //И бросим в build
         .pipe(reload({stream: true}));
 });
-
 //Шрифты
 gulp.task('fonts:build', function() {
     gulp.src(path.src.fonts)
@@ -123,13 +129,8 @@ gulp.task('watch', function(){
 });
 
 // Создадим локальный веб-сервер 
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./build"
-        },
-        browser: "chrome.exe"
-    });
+gulp.task('webserver', function () {
+    browserSync(config);
 });
 
 // Очистка
@@ -141,4 +142,4 @@ gulp.task('clean', function (cb) {
 
 /* Дефолтный таск, который будет запускать всю нашу сборку
 */
-gulp.task('default', ['build', 'browser-sync', 'watch']);
+gulp.task('default', ['build', 'webserver', 'watch']);
