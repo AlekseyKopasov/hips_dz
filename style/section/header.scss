@@ -50,20 +50,31 @@
     margin-top: 65px;
     float: left;
 }
+.cake__info,.cake__info-hov {
+    padding: 0 50px;
+}
 .header__bottom-info-ingredients{  
     margin-bottom: 185px;
-    &:hover{
-            transition: all 0.2s linear; 
-        .cake__info-hover{
-            display: block;
-            transition: all 0.2s linear; 
-        }
+    .cake__info{
+        display: block;
     }
-     img{
-        padding: 0 50px; 
-         &:hover{
-             background-image: url(/img/cake_info_hov.png);
-         }
+    .cake__info-hov{
+        display: none;
+    }
+    
+    &:hover{
+        .cake__info-hov{
+            display: block;
+            transition: all 0.5s linear; 
+        }
+        .cake__info{
+            display: none;
+            transition: all 0.5s linear; 
+        }
+        .cake__info-hover{ 
+            display: block;
+            transition: all 0.5s linear; 
+        }
     }
 }
     
@@ -72,7 +83,7 @@
         display: none;
         font-family: 'roboto', sans-serif;
         font-size: 15px;
-        padding: 35px 0;
+        padding: 35px 10px;
         border-radius: 15px;
         position: absolute;
         top: 0;
@@ -107,7 +118,7 @@
     .cake__imgr-desc{
         text-align: left;
         width: 200px;
-        padding-right: 7px;
+        padding-right: 10px;
     }
     .cake__ingr-ammount ul li{
         text-align: right;
@@ -162,7 +173,7 @@
     font-size: 15px;
     color: #fff;
 }
-.cup_prise, .fa-rub {
+.cup_prise{
     font-family: 'malina-webfont', sans-serif;
     font-size: 51px;
      color: #fff;
