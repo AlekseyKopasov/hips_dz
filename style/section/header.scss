@@ -8,14 +8,15 @@
 /*==========  header__top  ==========*/
 
 .header__top{
+    @extend %clearfix;
     position: relative;
     width: 100%;
     margin-bottom: 85px;
 }
 .header__top-logo { 
     float: left;
-  width: 283px;
-  height: 66px;
+    width: 283px;
+    height: 66px;
 }
 .header__top-menu{
     display: inline-block;
@@ -42,6 +43,7 @@
 /*==========  header__bottom  ==========*/
 .header__bottom{
     position: relative;
+    @extend %clearfix;
 }
 .header__bottom-info{
     display: inline-block;
@@ -180,7 +182,6 @@
 }
 .header__bottom-info-time-term{
     font-family: 'Arial', sans-serif;
-    //font-size: 13px;
     color: #fff;
     opacity: 0.28;
     text-align: center;
