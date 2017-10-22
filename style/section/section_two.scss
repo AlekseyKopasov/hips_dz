@@ -2,6 +2,23 @@
     min-height: 750px;
     width: 100%;
     background: url('/img/section_two/man.png') no-repeat center;
-    background-size: cover;
-    
+    background-size: cover;    
+}
+.why_so_delicious{
+    width: 546px;
+    padding-left: 15px;
+}
+.why_so_delicious h2 {
+    font-family: 'malina-webfont';
+    font-size: 62px;
+    color: #2b2f5f;
+    line-height: 105px;
+    padding: 110px 0 0 62px;
+}
+.w__desc p{
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    padding-left: 62px;
+    color: #535252;
+    margin-top: -22px;
 }
