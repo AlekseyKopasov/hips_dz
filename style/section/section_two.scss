@@ -5,7 +5,7 @@
     background-size: cover;    
 }
 .why_so_delicious{
-    width: 546px;
+    width: 550px;
     padding-left: 15px;
 }
 .why_so_delicious h2 {
@@ -21,4 +21,26 @@
     padding-left: 62px;
     color: #535252;
     margin-top: -22px;
+    margin-bottom: 60px;
+}
+.img__wrap_wr{
+    width: 660px;
+}
+.img__wrap{
+    display: inline-block;
+    width: 140px;
+    height: 148px;
+    margin-right: 20px;
+    margin-left: 50px;
+    text-align: left;
+}
+.img__wrap p{
+    width: 100%;
+    font-family: "malina-webfont";
+    font-size: 16px;
+    color: #747474;
+}
+.img__wrap img{
+    width: 90px;
+    height: 90px;
 }
