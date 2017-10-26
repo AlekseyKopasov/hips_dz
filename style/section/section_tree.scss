@@ -5,17 +5,38 @@
 }
 .section_tree{
      background-image: url("/img/section_tree/s__tree_bg.jpg"); 
+    background-size: cover;
      margin-top: -52px;
+    height: 100%;s
     
 }
 .section_tree h2{
     font-family: "malina-webfont";
     font-size: 62px;
-    padding-top: 127px;
-    padding-bottom: 32px;
+    padding-top: 115px;
+    margin-bottom: 0;
 }
 .section_tree p{
     font-family: "Roboto";
     font-size: 16px;
     text-align: center;
+}
+.st__items {
+    display: inline-block;
+    text-align: center;s
+    width: 24%;
+}
+.st__item_img img{
+    width: 175px;
+    height: 175px;
+}
+.st__item_header{
+    font-family: 'malina-webfont';
+    font-size: 32px;
+    color: #393939;
+}
+.st__item_desc{
+    font-family: 'malina-webfont';
+    font-size: 14px;
+    color: #ab594a;
 }
