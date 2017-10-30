@@ -7,7 +7,7 @@
      background-image: url("/img/section_tree/s__tree_bg.jpg"); 
     background-size: cover;
      margin-top: -52px;
-    height: 100%;s
+    text-align: center;
     
 }
 .section_tree h2{
@@ -23,20 +23,45 @@
 }
 .st__items {
     display: inline-block;
-    text-align: center;s
+    text-align: center;
     width: 24%;
+    margin: 0px -36px;
+    background-image: url("/img/section_tree/cake_itemset.png");
+    background-repeat: no-repeat;
 }
-.st__item_img img{
-    width: 175px;
-    height: 175px;
+.st__items:nth-child(2){
+    background-position: 114px 0px;    
+}
+.st__items:nth-child(3){
+    background-position: -307px 0;    
+}
+.st__items:nth-child(4){
+    background-position: -777px 26px;  
+} 
+.st__items:nth-child(5){
+    background-position: -1240px 36px;
+}
+.st__items:nth-child(6){
+    background-position: -2154px 10px;
+}
+.st__items:nth-child(7){
+    background-position: -1670px 30px;
+}
+.st__items:nth-child(8){
+    background-position: -2630px -2px;
+}
+.st__items:nth-child(9){
+    background-position: -3060px 22px;
 }
 .st__item_header{
     font-family: 'malina-webfont';
     font-size: 32px;
     color: #393939;
+    padding-top: 235px;
 }
 .st__item_desc{
     font-family: 'malina-webfont';
     font-size: 14px;
     color: #ab594a;
+    padding: 0px 65px 88px;  
 }
